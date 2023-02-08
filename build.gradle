@@ -26,14 +26,16 @@ repositories {
 
 dependencies {
     implementation('org.springframework.boot:spring-boot-starter-web')
-    compileOnly 'org.projectlombok:lombok:1.18.24'
+    implementation ('org.projectlombok:lombok:1.18.24')
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('com.h2database:h2')
     implementation('org.springframework.boot:spring-boot-starter-mustache')
     implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+    implementation('org.springframework.session:spring-session-jdbc')
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
-    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testImplementation ('org.projectlombok:lombok:1.18.24')
+    testImplementation("org.springframework.security:spring-security-test")
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
 }
